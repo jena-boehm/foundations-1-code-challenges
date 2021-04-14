@@ -36,9 +36,12 @@ export function makeArrayWithIsHungry(arr) {
     const hungryPets = arr.map(pet => ({
         ...pet, isHungry: true
     }));
-
     return hungryPets;
 }
+
+// arr.map((item) => item.isHungry = true)
+// return arr;
+
 
 // const pets = arr.map((pet) => Object.assign({}, pet, { isHungry: true })
 //     );

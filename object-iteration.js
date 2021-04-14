@@ -18,12 +18,22 @@ Output:
 }
 */
 
-export function makeMoreScreamingKeys(someObject) {
-    let newObject = {};
-    const arrays = Object.entries(someObject)
+// export function makeMoreScreamingKeys(someObject) {
+//     let newObject = {};
+//     const arrays = Object.entries(someObject)
 
-    for (let [key, value] of arrays) {
-        newObject[key.toUpperCase()] = value;
+//     for (let [key, value] of arrays) {
+//         newObject[key.toUpperCase()] = value;
+//     }
+//     return newObject;
+// }
+
+export function makeMoreScreamingKeys(someObject) {
+    const newObject = {};
+    for (let key in someObject) {
+        let value = someObject[key];
+        let upperCaseKey = key.toUpperCase();
+        newObject[upperCaseKey] = value;
     }
     return newObject;
 }
